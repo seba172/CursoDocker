@@ -16,6 +16,10 @@ Permite indicar como se comprueba la salud de un contenedor. Para hacerlo, se de
 
 Para que se utiliza:
 Validar salud de un contenedor corriendo en un ambiente
+El estado de los contenedores es una información que Docker “conoce”, pero no hace nada con ella. Esto cambia con los orquestadores, como por ejemplo Docker Swarm. Este último tiene esta salud en cuenta para dos cosas:
+
+Reiniciar (y posiblemente recolocar) los contenedores unhealthy para asegurar que se da servicio con el número de contenedores especificado.
+Para hacer rolling updates, esperando a que los contenedores estén saludables antes de quitar los anteriores, resultando en despliegues sin downtime.
 
 
 * ONBUILD
