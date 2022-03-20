@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pingapp2-config-files
+  labels:
+    app: pingapp2
+data:
+  config.json: |
+    {
+      "key1" : "value1"
+    }
